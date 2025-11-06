@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="achievements.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Achievements</h1>
+            </div>
+        </header>
+
+        <!-- Daily Achievements -->
+        <section class="achievements-section" id="daily-achievements">
+            <h2 class="section-title">Daily Achievements</h2>
+            <div class="achievements-grid" id="daily-achievements-grid">
+                <!-- Daily achievements will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Weekly Achievements -->
+        <section class="achievements-section">
+            <h2 class="section-title">Weekly Achievements</h2>
+            <div class="achievements-grid" id="weekly-achievements-grid">
+                <!-- Weekly achievements will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Monthly Achievements -->
+        <section class="achievements-section">
+            <h2 class="section-title">Monthly Achievements</h2>
+            <div class="achievements-grid" id="monthly-achievements-grid">
+                <!-- Monthly achievements will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Additional Achievements -->
+        <section class="achievements-section">
+            <h2 class="section-title">Additional Achievements</h2>
+            <div class="achievements-grid" id="additional-achievements-grid">
+                <!-- Additional achievements will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Achievement Score Bar -->
+        <section class="score-section">
+            <h2 class="section-title">Achievement Score</h2>
+            <div class="score-card">
+                <div class="score-header">
+                    <span class="score-label">Current Score</span>
+                    <span class="score-value" id="current-score">0</span>
+                </div>
+                <div class="score-bar-container">
+                    <div class="score-bar">
+                        <div class="score-fill" id="score-fill"></div>
+                    </div>
+                    <div class="score-marker" style="left: 25%;">250</div>
+                    <div class="score-marker" style="left: 50%;">500</div>
+                    <div class="score-marker" style="left: 75%;">750</div>
+                    <div class="score-marker" style="left: 100%;">1000</div>
+                </div>
+                <div class="score-target">Target: 1000 points</div>
+            </div>
+        </section>
+
+        <!-- Monthly Points Tracker -->
+        <section class="monthly-tracker-section">
+            <h2 class="section-title">Monthly Progress</h2>
+            <div class="tracker-card">
+                <div class="tracker-header">
+                    <span class="tracker-label">2024 Progress</span>
+                    <span class="tracker-total" id="year-total">Total: 0 pts</span>
+                </div>
+                <div class="months-grid" id="months-grid">
+                    <!-- Months will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="achievements.js"></script>
+</body>
+</html>

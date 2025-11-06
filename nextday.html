@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Ahead - Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="nextday.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Plan Ahead</h1>
+            </div>
+        </header>
+
+        <!-- Current Day Box -->
+        <section class="current-day-section">
+            <div class="current-day-card">
+                <h3 class="current-day-title">Today</h3>
+                <div class="current-day-info">
+                    <div id="current-day" class="current-day-name">Loading...</div>
+                    <div id="current-date" class="current-day-date"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day Navigation -->
+        <section class="day-navigation">
+            <div class="day-header">
+                <button id="prev-day-btn" class="nav-arrow-btn prev-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                
+                <div class="day-info">
+                    <h2 id="display-day" class="day-name">Tomorrow</h2>
+                    <div id="display-date" class="day-date"></div>
+                </div>
+                
+                <button id="next-day-btn" class="nav-arrow-btn next-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Workout Plan -->
+        <section class="workout-plan-section">
+            <div class="plan-container">
+                <h3 class="goal-title" id="goal-title">Tomorrow's Goal:</h3>
+                <div id="workout-content" class="workout-content">
+                    <!-- Workout content will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="nextday.js"></script>
+</body>
+</html>

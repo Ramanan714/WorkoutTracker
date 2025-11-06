@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plans - Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="plans.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Workout Plans</h1>
+            </div>
+        </header>
+
+        <!-- Main Workout Plan Card -->
+        <section class="plan-card">
+            <div class="plan-header">
+                <h2 class="plan-title">My Workout Plan</h2>
+                <p class="plan-subtitle">7-Days Muscle Building Plan</p>
+            </div>
+            
+            <div class="plan-info-grid">
+                <div class="info-box">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-content">
+                        <div class="info-label">Duration</div>
+                        <div class="info-value">1 week</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">📅</div>
+                    <div class="info-content">
+                        <div class="info-label">Schedule</div>
+                        <div class="info-value">5 workout days + 2 rest days</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-content">
+                        <div class="info-label">Session Time</div>
+                        <div class="info-value">30–35 mins</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">🏋️</div>
+                    <div class="info-content">
+                        <div class="info-label">Equipment</div>
+                        <div class="info-value">No equipment needed</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon">🎯</div>
+                    <div class="info-content">
+                        <div class="info-label">Focus</div>
+                        <div class="info-value">Full Body</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan-details">
+                <div class="detail-item">
+                    <strong>Goal:</strong> Gain muscles & strength
+                </div>
+                <div class="detail-item">
+                    <strong>Focus Areas:</strong> Arms, Legs, Abs, Shoulders, Back, Posture
+                </div>
+                <div class="detail-item">
+                    <strong>Routine:</strong> 5 workout days + 2 rest/stretch days
+                </div>
+            </div>
+
+            <button id="edit-plan-btn" class="edit-btn">
+                <i class="fas fa-edit"></i>
+                Edit Plan
+            </button>
+        </section>
+
+        <!-- Edit Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Workout Plan</h3>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="day-select">Which day do you want to edit?</label>
+                        <select id="day-select" class="day-select">
+                            <option value="">Select a day</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                    </div>
+
+                    <div id="workout-editor" class="workout-editor" style="display: none;">
+                        <h4 id="editor-day-title">Monday's Workout</h4>
+                        <div id="workout-list" class="workout-list">
+                            <!-- Workouts will be populated here -->
+                        </div>
+                        
+                        <div class="add-workout-form">
+                            <h5>Add New Workout</h5>
+                            <div class="form-row">
+                                <input type="text" id="workout-name" placeholder="Workout Name" class="form-input">
+                                <input type="number" id="workout-sets" placeholder="Sets" class="form-input" min="1">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" id="workout-reps" placeholder="Reps or Time" class="form-input">
+                                <select id="workout-type" class="form-input">
+                                    <option value="reps">Reps</option>
+                                    <option value="time">Time</option>
+                                </select>
+                            </div>
+                            <button id="add-workout-btn" class="add-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Workout
+                            </button>
+                        </div>
+
+                        <div class="modal-actions">
+                            <button id="save-changes-btn" class="save-btn">Save Changes</button>
+                            <button id="cancel-edit-btn" class="cancel-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day Selection Buttons -->
+        <section class="day-selection">
+            <div class="day-buttons">
+                <button class="day-btn active" data-day="monday">Monday</button>
+                <button class="day-btn" data-day="tuesday">Tuesday</button>
+                <button class="day-btn" data-day="wednesday">Wednesday</button>
+                <button class="day-btn" data-day="thursday">Thursday</button>
+                <button class="day-btn" data-day="friday">Friday</button>
+                <button class="day-btn" data-day="saturday">Saturday</button>
+                <button class="day-btn" data-day="sunday">Sunday</button>
+            </div>
+        </section>
+
+        <!-- Day Workout Details -->
+        <section id="workout-details" class="workout-details">
+            <!-- Content will be populated by JavaScript -->
+        </section>
+    </div>
+
+    <script src="plans.js"></script>
+</body>
+</html>

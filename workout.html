@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Workout - Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="workout.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Start Training</h1>
+            </div>
+        </header>
+
+        <!-- Today's Workout Box -->
+        <section class="workout-card">
+            <div class="workout-header">
+                <h2 id="workout-day-title" class="workout-title">Today's Workout</h2>
+                <div id="current-datetime" class="workout-datetime">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Current Day's Workout Plan -->
+        <section class="plan-preview-card">
+            <h3 class="plan-preview-title">Today's Workout Plan</h3>
+            <div id="workout-plan-exercises" class="workout-plan-exercises">
+                <!-- Workout exercises will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Workout Control Box -->
+        <section class="control-card">
+            <h3 class="control-subtitle">Get Ready</h3>
+            <h2 class="control-title">Start Your Workout</h2>
+            
+            <!-- Workout Progress -->
+            <div id="workout-progress" class="workout-progress">
+                <div class="progress-info">
+                    <span id="current-workout-name">Ready to start</span>
+                    <span id="workout-counter" class="workout-counter">-/-</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Timer Display (for timed workouts) -->
+            <div id="timer-display" class="timer-display" style="display: none;">
+                <div class="timer-circle">
+                    <span id="timer-value" class="timer-value">00:00</span>
+                </div>
+                <div class="timer-label">Time Remaining</div>
+            </div>
+
+            <!-- Action Button -->
+            <button id="workout-action-btn" class="action-btn start-btn">
+                <i class="fas fa-play"></i>
+                Start Workout
+            </button>
+
+            <!-- Rest Days Message -->
+            <div id="rest-day-message" class="rest-day-message" style="display: none;">
+                <div class="rest-icon">🌿</div>
+                <h3>Rest & Recovery Day</h3>
+                <p id="rest-day-description">Today is your recovery day. Focus on rest and wellness activities.</p>
+                <button id="finish-rest-btn" class="action-btn finish-btn">
+                    <i class="fas fa-check"></i>
+                    Mark as Completed
+                </button>
+            </div>
+        </section>
+
+        <!-- Workout Complete Modal -->
+        <div id="completion-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Workout Complete! 🎉</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="completion-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="completed-workouts">0</div>
+                            <div class="stat-label">Workouts Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="total-exercises">0</div>
+                            <div class="stat-label">Exercises Done</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="workout-duration">0 min</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                    <p class="completion-message">Great job! You've completed today's workout.</p>
+                    <div class="modal-actions">
+                        <a href="index.html" class="action-btn home-btn">
+                            <i class="fas fa-home"></i>
+                            Back to Home
+                        </a>
+                        <a href="progress.html" class="action-btn progress-btn">
+                            <i class="fas fa-chart-line"></i>
+                            View Progress
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="workout.js"></script>
+</body>
+</html>

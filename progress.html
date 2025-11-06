@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker - Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="page-title">Progress Tracker</h1>
+            </div>
+            <div id="current-day" class="current-day">Loading...</div>
+        </header>
+
+        <!-- Progress Bars Section -->
+        <section class="progress-section">
+            <div class="progress-bars">
+                <div class="progress-bar-card">
+                    <div class="progress-header">
+                        <h3>Weekly Progress</h3>
+                        <span id="weekly-percentage" class="percentage">0%</span>
+                    </div>
+                    <div class="bar-container">
+                        <div id="weekly-bar" class="progress-bar">
+                            <div class="progress-fill weekly-fill"></div>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="weekly-completed">0</span>/<span id="weekly-total">7</span> days completed
+                    </div>
+                </div>
+
+                <div class="progress-bar-card">
+                    <div class="progress-header">
+                        <h3>Monthly Progress</h3>
+                        <span id="monthly-percentage" class="percentage">0%</span>
+                    </div>
+                    <div class="bar-container">
+                        <div id="monthly-bar" class="progress-bar">
+                            <div class="progress-fill monthly-fill"></div>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="monthly-completed">0</span>/<span id="monthly-total">30</span> days completed
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section class="calendar-section">
+            <div class="calendar-header">
+                <h2>Workout Calendar</h2>
+                <div class="calendar-controls">
+                    <select id="year-select" class="year-select">
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                    <select id="month-select" class="month-select">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- Calendar will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <div class="color-box completed"></div>
+                    <span>Workout Completed</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box not-completed"></div>
+                    <span>Workout Not Done</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box future"></div>
+                    <span>Upcoming Days</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box rest-day"></div>
+                    <span>Rest Day (Auto-completed)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Achievements Section -->
+        <section class="achievements-section">
+            <h2>Weekly Achievements</h2>
+            <div class="achievements-grid" id="achievements-grid">
+                <!-- Achievements will be populated by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="progress.js"></script>
+</body>
+</html>

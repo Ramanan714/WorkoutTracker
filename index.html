@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">WORKOUT TRACKER</h1>
+            <div id="datetime" class="datetime">Loading...</div>
+        </header>
+
+        <!-- Main Action Buttons - Vertical Stack -->
+        <section class="button-section">
+            <a href="workout.html" class="action-btn">
+                <i class="fas fa-dumbbell"></i>
+                <span>Start Workout</span>
+            </a>
+            <a href="progress.html" class="action-btn">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="plans.html" class="action-btn">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Plans</span>
+            </a>
+        </section>
+
+        <!-- Summary Boxes - Horizontal under Plans -->
+        <section class="summary-section">
+            <a href="progress.html" class="summary-card clickable-card" id="streak-card">
+                <div class="summary-icon">🔥</div>
+                <div class="summary-value" id="streak">0</div>
+                <div class="summary-label">Day Streak</div>
+                <div class="card-hover-text">View Progress →</div>
+            </a>
+            <a href="progress.html" class="summary-card clickable-card" id="workouts-card">
+                <div class="summary-icon">💪</div>
+                <div class="summary-value" id="total-workouts">0</div>
+                <div class="summary-label">Total Workouts</div>
+                <div class="card-hover-text">View Progress →</div>
+            </a>
+            <a href="nextday.html" class="summary-card clickable-card" id="next-workout-card">
+                <div class="summary-icon">📅</div>
+                <div class="summary-value" id="next-workout">-</div>
+                <div class="summary-label">Next Workout</div>
+                <div class="card-hover-text">View Details →</div>
+            </a>
+            <a href="achievements.html" class="summary-card clickable-card" id="achievements-card">
+                <div class="summary-icon">🏆</div>
+                <div class="summary-value" id="achievements-count">0</div>
+                <div class="summary-label">Achievements</div>
+                <div class="card-hover-text">View All →</div>
+            </a>
+        </section>
+
+        <!-- Workout Completion -->
+        <section class="completion-section">
+            <div id="completion-status" class="completion-box">
+                <!-- Content will be filled by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Motivation Section -->
+        <section class="motivation-section">
+            <div class="motivation-card">
+                <h3 class="motivation-title">Daily Motivation</h3>
+                <p id="motivation-quote" class="motivation-quote">
+                    Loading motivation...
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
